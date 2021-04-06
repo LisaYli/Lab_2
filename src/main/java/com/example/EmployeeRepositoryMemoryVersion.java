@@ -1,10 +1,11 @@
 package com.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeRepositoryMemoryVersion implements EmployeeRepository {
 
-    List<Employee> employeeList;
+    List<Employee> employeeList = new ArrayList<>();
 
     public EmployeeRepositoryMemoryVersion(List<Employee> employeeList) {
         this.employeeList = employeeList;
@@ -12,7 +13,7 @@ public class EmployeeRepositoryMemoryVersion implements EmployeeRepository {
 
     @Override
     public List<Employee> findAll() {
-return employeeList;
+        return employeeList;
     }
 
     @Override
